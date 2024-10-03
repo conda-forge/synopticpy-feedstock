@@ -1,5 +1,5 @@
 {% set name = "SynopticPy" %}
-{% set version = "2023.3.0" %}
+{% set version = "2024.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8e2bcdce432aa58f633e37893606401ca72495f9b49f8ce09aaa445aa64368e1
+  sha256: 744fba28299c9487e611e55bde284e5c81cb04fd7110f57d58e264946e7fe9a3
 
 build:
   number: 0
