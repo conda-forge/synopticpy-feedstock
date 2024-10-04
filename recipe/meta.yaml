@@ -1,4 +1,4 @@
-{% set name = "SynopticPy" %}
+{% set name = "synopticpy" %}
 {% set version = "2024.9.0" %}
 
 package:
