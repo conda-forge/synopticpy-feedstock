@@ -19,7 +19,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.11
+    - python 3.11
     - hatchling
     - hatch-vcs
 
