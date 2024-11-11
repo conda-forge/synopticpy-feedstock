@@ -13,8 +13,7 @@ Development: https://github.com/blaylockbk/SynopticPy
 
 Documentation: https://SynopticPy.readthedocs.io/
 
-Load mesonet weather and environmental data from the Synoptic API into a
-Pandas Dataframe.
+Retrieve mesonet weather data as Polars DataFrames from Synoptic's Weather API.
 
 
 Current build status
