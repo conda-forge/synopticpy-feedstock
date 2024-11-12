@@ -1,16 +1,16 @@
 {% set name = "synopticpy" %}
-{% set version = "2024.9.0" %}
+{% set version = "2024.11.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 744fba28299c9487e611e55bde284e5c81cb04fd7110f57d58e264946e7fe9a3
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 3d2eb315ada6a0d5894ab6e51129dccc826bb6aedad98a8fe38246adeb97873d
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
@@ -19,14 +19,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
-    - setuptools
-    - setuptools_scm
+    - python 3.11
+    - hatchling
+    - hatch-vcs
 
   run:
     - numpy
-    - pandas
-    - python >=3.8
+    - polars[style,plot,timezone] >=1.9.0
+    - python >=3.11
     - requests
     - toml
     - matplotlib-base
@@ -46,8 +46,7 @@ about:
   license_file: LICENSE
   summary: Get mesonet data from the Synoptic API.
   description: |
-    Load mesonet weather and environmental data from the Synoptic API into a
-    Pandas Dataframe.
+    Retrieve mesonet weather data as Polars DataFrames from Synoptic's Weather API.
   doc_url: https://SynopticPy.readthedocs.io/
   dev_url: https://github.com/blaylockbk/SynopticPy
 
