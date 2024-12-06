@@ -19,14 +19,14 @@ build:
 requirements:
   host:
     - pip
-    - python 3.11
+    - python {{ python_min }}
     - hatchling
     - hatch-vcs
 
   run:
     - numpy
     - polars[style,plot,timezone] >=1.9.0
-    - python >=3.11
+    - python >={{ python_min }}
     - requests
     - toml
     - matplotlib-base
@@ -38,6 +38,7 @@ test:
     #- synoptic.services  # Askes for User input, so don't do this.
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/blaylockbk/SynopticPy
