@@ -1,5 +1,5 @@
 {% set name = "synopticpy" %}
-{% set version = "2024.11.0" %}
+{% set version = "2024.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3d2eb315ada6a0d5894ab6e51129dccc826bb6aedad98a8fe38246adeb97873d
+  sha256: 44ec3e84399510d9c10c50726a80e6b1829662837b4d6f412db0df74702d103a
 
 build:
   number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
-      - PYTHONIOENCODING=utf8
+    - PYTHONIOENCODING=utf8
 
 requirements:
   host:
