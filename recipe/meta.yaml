@@ -1,6 +1,5 @@
 {% set name = "synopticpy" %}
 {% set version = "2024.12.0" %}
-{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -20,14 +19,14 @@ build:
 requirements:
   host:
     - pip
-    - python {{ python_min }}
+    - python 3.11
     - hatchling
     - hatch-vcs
 
   run:
     - numpy
     - polars[style,plot,timezone] >=1.9.0
-    - python >={{ python_min }}
+    - python >=3.11
     - requests
     - toml
     - matplotlib-base
@@ -39,7 +38,6 @@ test:
     #- synoptic.services  # Askes for User input, so don't do this.
   requires:
     - pip
-    - python {{ python_min }}
 
 about:
   home: https://github.com/blaylockbk/SynopticPy
