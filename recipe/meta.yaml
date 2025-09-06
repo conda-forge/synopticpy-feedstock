@@ -1,6 +1,6 @@
-{% set python_min = '3.11' %}
+{% set python_min = "3.11" %}
 {% set name = "synopticpy" %}
-{% set version = "2024.12.0" %}
+{% set version = "2025.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 44ec3e84399510d9c10c50726a80e6b1829662837b4d6f412db0df74702d103a
+  sha256: 29131d23cc30cd24a56292a63784b4c390eea337a667e0738fb413cae0a7e32d
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   script_env:
