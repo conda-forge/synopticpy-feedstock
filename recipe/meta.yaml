@@ -1,14 +1,14 @@
 {% set python_min = "3.11" %}
 {% set name = "synopticpy" %}
-{% set version = "2026.6.0" %}
+{% set version = "2026.10.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bf8fa557472075dfb970faf984763162235a72f9c202b751ecf919c210de0011
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 3f3b31576ed43cc5e855869f5c64b98fb3a10fa4f62c3d99d687714797156f9a
 
 build:
   number: 0
