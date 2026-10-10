@@ -25,12 +25,12 @@ requirements:
     - hatch-vcs
 
   run:
-    - numpy>=2.5.3
+    - numpy >=2.5.3
     - polars[style,plot,timezone] >=2.0.0
     - python >={{ python_min }}
-    - requests>=2.34.2
-    - toml>=0.10.2
-    - matplotlib-base>=3.11.2
+    - requests >=2.34.2
+    - toml >=0.10.2
+    - matplotlib-base >=3.11.2
 
 test:
   commands:
